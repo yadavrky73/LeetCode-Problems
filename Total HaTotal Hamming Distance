@@ -1,0 +1,16 @@
+class Solution:
+    def totalHammingDistance(self, nums: List[int]) -> int:
+        an=0
+        for i in range(32):
+            a=0
+            b=0
+            for j in range(len(nums)):
+                aa=nums[j]>>i&1
+                print(aa)
+                if aa>0:
+                    a+=1
+                else:
+                    b+=1
+            an+=a*b
+        return an
+    
