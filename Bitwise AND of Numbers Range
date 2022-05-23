@@ -1,0 +1,16 @@
+class Solution:
+    def rangeBitwiseAnd(self, left: int, right: int) -> int:
+        a=bin(left)[2:]
+        b=bin(right)[2:]
+        print(a,b)
+        if len(a)!=len(b):
+            return 0
+        ar=0
+        for i in range(len(a)):
+            if a[i]==b[i]=='1':
+                ar+=pow(2,len(a)-i-1)
+            elif a[i]!=b[i]:
+                break
+        return ar
+        
+        
